@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Mapping Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    h1 {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Image Mapping Example</h1>
+  <p>Click different areas of the image below:</p>
+
+  <!-- Image with a usemap -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/World_map_blank_without_borders.svg"
+       usemap="#worldmap" alt="World Map" width="600">
+
+  <!-- Define the map and clickable areas -->
+  <map name="worldmap">
+    <area shape="rect" coords="90,100,160,180" href="https://en.wikipedia.org/wiki/North_America" alt="North America" target="_blank">
+    <area shape="circle" coords="420,250,30" href="https://en.wikipedia.org/wiki/Africa" alt="Africa" target="_blank">
+    <area shape="poly" coords="480,120,550,130,540,200,470,190" href="https://en.wikipedia.org/wiki/Asia" alt="Asia" target="_blank">
+  </map>
+
+  <p>Each shape links to a different continent's Wikipedia page.</p>
+</body>
+</html>
